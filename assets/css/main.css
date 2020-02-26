@@ -2405,6 +2405,7 @@ input, select, textarea {
 				width: 10%;
 				animation: fly 15s ease-in-out infinite;
 			    animation-fill-mode: forwards;
+				padding-top: 1.5em; 
 			}
 
 @keyframes fly {
@@ -3641,3 +3642,7 @@ nav a:hover::before {
 
 #three { text-align: center;}
 #four{ text-align: center;}
+
+#brain {
+	padding-bottom: 5em;
+}
