@@ -3245,6 +3245,7 @@ input, select, textarea {
 					padding: 0;
 				}
 
+
 /* XLarge */
 
 	@media screen and (max-width: 1680px) {
@@ -3262,6 +3263,8 @@ input, select, textarea {
 			}
 
 	}
+
+
 
 /* Large */
 
