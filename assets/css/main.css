@@ -2734,8 +2734,7 @@ input, select, textarea {
 		text-transform: uppercase;
 		white-space: nowrap;
 	}
-.button2{
-	border-radius: 100%;
+
 }
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
@@ -3264,7 +3263,9 @@ input, select, textarea {
 
 	}
 
-
+footer{
+	padding: 6em 0 6em 0 ;
+}
 
 /* Large */
 
