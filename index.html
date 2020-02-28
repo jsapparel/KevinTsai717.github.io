@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 		<title>Kevin Tsai</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -88,7 +88,7 @@
 							<header class="major">
 								<h2>Skillset<br /></h2>
 							</header>
-							<p data-aos="fade-up">I have the courage challenging myself to explore the unknown, being passionate in visual, layout design, animation, front-end web development. I understand the basic web coding.</p>
+							<p data-aos="fade-up">I have the courage challenging myself to explore the unknown, being passionate in visual, layout design, animation, front-end web development. I understand the basic web coding, principle of Responsive Web Design.</p>
 							<h3>In the process of pushing myself to my limit.</h3>
 						</div>
 						
@@ -99,28 +99,31 @@
 		<!-- Three -->
 			<section id="three" class="main style1 special">
 				<div class="container">
-					<header id="brain">
-						<img src="images/brain.png"  width=1000em bottom=500px alt=""/>
+					<header class="image fit" id="brain">
+						<img src="images/brain.png"  width=1000em alt=""/>
 					</header>
 					<p>Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.</p>
 					
 					<div class="row gtr-150">
 						<div class="col-4 col-12-medium">
 							<span class="image fit">
-								<a id="animation" href="#animatedModal"><img src="images/pic02.jpg" alt="" /></a>
+								<a class="animation" href="#animatedModal"><img src="images/pic02.jpg" alt="" /></a>
 							</span>
 							<h3>Animations</h3>
 							<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis no.</p>
 						</div>
 						
 						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/pic03.jpg" alt="" /></span>
+							<span class="image fit">
+								<a class="illustration" href="#illusModal"><img src="images/pic03.jpg" alt="" /></a>
+							</span>
 							<h3>Illustrations</h3>
 							<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis no.</p>
 						</div>
 						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-							<h3>User studies</h3>
+							<span class="image fit">
+								<a class="user" href="#userModal"><img src="images/pic04.jpg" alt="" /></a></span>
+							<h3>User Studies</h3>
 							<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc .</p>
 									<div><img data-aos="fade" src="images/Signature.gif" alt="" width="150px"/></div>
 						</div>
@@ -128,6 +131,33 @@
 				</div>
 			</section>
 
+				    <!--works content-->
+    <div id="animatedModal">
+         <div class="close-animatedModal">
+                CLOSE MODAL
+        </div>
+        <div class="modal-content">
+			<img src="images/Kevanime.gif" alt=""/>
+        </div>
+    </div>
+				
+	<div id="illusModal">
+			<div class="close-illusModal">
+				CLOSE MODAL
+		    </div>
+			
+		<div class="modal-content">
+        </div>
+	</div>
+				
+    <div id="userModal">
+			<div class="close-userModal">
+				CLOSE MODAL
+		    </div>
+		<div class="modal-content">
+        </div>
+	</div>
+				
 		<!-- Four -->
 			<section id="four" class="main style2 special">
 				<div class="container">
@@ -141,22 +171,14 @@
 					</ul>
 				</div>
 			</section>
+
+
+
+					
 				
 				
-				 <!--Call your modal-->
-  
-    <!--DEMO01-->
-    <div id="animatedModal">
-        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
-         <div class="close-animatedModal">
-            CLOSE MODAL
-        </div>
-        <div class="modal-content">
-			
-			<img src="images/Kevanime.gif" alt=""/>
-                  	<!--Your modal content goes here-->
-        </div>
-    </div>
+					
+					
 
 		<!-- Five -->
 		<!--
@@ -505,9 +527,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				</script>
 				 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="assets/js/animatedModal.min.js"></script>
+  <script src="assets/js/illusModal.min.js"></script>
+  <script src="assets/js/userModal.min.js"></script>
 
 <script>
-  $("#animation").animatedModal();
+  $(".animation").animatedModal();
+  $(".illustration").illusModal();
+  $(".user").userModal();
 </script>
 	</body>
 </html>
