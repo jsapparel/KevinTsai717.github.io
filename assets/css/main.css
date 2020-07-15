@@ -276,23 +276,6 @@ input, select, textarea {
 			width: 100%;
 		}
 
-		@media screen and (max-width: 980px) {
-
-			.container {
-				max-width: 100% !important;
-				width: 100% !important;
-			}
-
-		}
-
-		@media screen and (max-width: 480px) {
-
-			.container {
-				max-width: calc(100% - 3em);
-			}
-
-		}
-
 /* Row */
 
 	.row {
@@ -2606,8 +2589,9 @@ input, select, textarea {
 	}
 
 		ul.major-icons li {
-			display: inline-block;
-			padding: 2.5em;
+			display: inline-flex;
+			flex-wrap: wrap;
+			padding: 1em;
 			text-align: center;
 		}
 
@@ -2960,10 +2944,6 @@ input, select, textarea {
 			color: #ffffff;
 		}
 
-		#header header.major:after {
-			background: #ffffff;
-		}
-
 		#header input[type="submit"],
 		#header input[type="reset"],
 		#header input[type="button"],
@@ -2972,49 +2952,6 @@ input, select, textarea {
 			box-shadow: inset 0 0 0 1px #ffffff;
 			color: #ffffff !important;
 		}
-
-			#header input[type="submit"]:hover,
-			#header input[type="reset"]:hover,
-			#header input[type="button"]:hover,
-			#header button:hover,
-			#header .button:hover {
-				background-color: rgba(255, 255, 255, 0.125);
-			}
-
-			#header input[type="submit"]:active,
-			#header input[type="reset"]:active,
-			#header input[type="button"]:active,
-			#header button:active,
-			#header .button:active {
-				background-color: rgba(255, 255, 255, 0.25);
-			}
-
-			#header input[type="submit"].primary,
-			#header input[type="reset"].primary,
-			#header input[type="button"].primary,
-			#header button.primary,
-			#header .button.primary {
-				background-color: #ffffff;
-				box-shadow: inset 0 0 0 1px #ffffff !important;
-				color: #4686a0 !important;
-			}
-
-				#header input[type="submit"].primary:hover,
-				#header input[type="reset"].primary:hover,
-				#header input[type="button"].primary:hover,
-				#header button.primary:hover,
-				#header .button.primary:hover {
-					background-color: rgba(255, 255, 255, 0.125) !important;
-					color: #ffffff !important;
-				}
-
-				#header input[type="submit"].primary:active,
-				#header input[type="reset"].primary:active,
-				#header input[type="button"].primary:active,
-				#header button.primary:active,
-				#header .button.primary:active {
-					background-color: rgba(255, 255, 255, 0.25) !important;
-				}
 
 		#header ul.major-icons li .icon {
 			border-color: #ffffff;
@@ -3154,58 +3091,6 @@ input, select, textarea {
 			background: #ffffff;
 		}
 
-		#footer input[type="submit"],
-		#footer input[type="reset"],
-		#footer input[type="button"],
-		#footer button,
-		#footer .button {
-			box-shadow: inset 0 0 0 1px #ffffff;
-			color: #ffffff !important;
-		}
-
-			#footer input[type="submit"]:hover,
-			#footer input[type="reset"]:hover,
-			#footer input[type="button"]:hover,
-			#footer button:hover,
-			#footer .button:hover {
-				background-color: rgba(255, 255, 255, 0.125);
-			}
-
-			#footer input[type="submit"]:active,
-			#footer input[type="reset"]:active,
-			#footer input[type="button"]:active,
-			#footer button:active,
-			#footer .button:active {
-				background-color: rgba(255, 255, 255, 0.25);
-			}
-
-			#footer input[type="submit"].primary,
-			#footer input[type="reset"].primary,
-			#footer input[type="button"].primary,
-			#footer button.primary,
-			#footer .button.primary {
-				background-color: #ffffff;
-				box-shadow: inset 0 0 0 1px #ffffff !important;
-				color: #4686a0 !important;
-			}
-
-				#footer input[type="submit"].primary:hover,
-				#footer input[type="reset"].primary:hover,
-				#footer input[type="button"].primary:hover,
-				#footer button.primary:hover,
-				#footer .button.primary:hover {
-					background-color: rgba(255, 255, 255, 0.125) !important;
-					color: #ffffff !important;
-				}
-
-				#footer input[type="submit"].primary:active,
-				#footer input[type="reset"].primary:active,
-				#footer input[type="button"].primary:active,
-				#footer button.primary:active,
-				#footer .button.primary:active {
-					background-color: rgba(255, 255, 255, 0.25) !important;
-				}
-
 		#footer ul.major-icons li .icon {
 			border-color: #ffffff;
 		}
@@ -3239,7 +3124,6 @@ input, select, textarea {
 					padding: 0;
 				}
 
-
 /* XLarge */
 
 	@media screen and (max-width: 1680px) {
@@ -3262,6 +3146,11 @@ footer{
 	padding: 6em 0 6em 0 ;
 }
 
+li img{
+			width:8em;
+			max-width: 100%;
+		}
+
 /* Large */
 
 	@media screen and (max-width: 1140px) {
@@ -3277,8 +3166,7 @@ footer{
 			}
 
 		/* List */
-
-			ul.major-icons li img {
+				ul.major-icons li img {
 				padding: 1em;
 			}
 
@@ -3302,7 +3190,9 @@ footer{
 
 			#header {
 				padding: 5em 0 5em 0 ;
-				background-attachment: scroll;
+				background-attachment: fixed;
+				background-position: top left;
+				
 			}
 
 				#header br {
@@ -3315,14 +3205,16 @@ footer{
 				padding: 4em 0 4em 0 ;
 				background-attachment: scroll;
 			}
-
 	}
 
 /* Medium */
 
-	@media screen and (max-width: 980px) {
+	@media screen and (max-width: 720px) {
 
 		/* List */
+		ul img{
+			width: 6em;
+		}
 
 			ul.major-icons li img {
 				padding: 1em;
@@ -3343,7 +3235,10 @@ footer{
 		/* Header */
 
 			#header {
-				padding: 8em 3em 8em 3em ;
+				padding: 8em 0 0 0;
+				background-attachment: fixed;
+				background-position: 0 40%;
+				background-size:  20em;
 			}
 
 		/* Footer */
@@ -3375,90 +3270,6 @@ footer{
 		
 			#four{ text-align: center;
 		}
-	}
-
-/* Small */
-
-	@media screen and (max-width: 736px) {
-
-		/* Basic */
-
-			body, input, select, textarea {
-				font-size: 12pt;
-			}
-
-			h1 {
-				font-size: 1.75em;
-			}
-
-			h2 {
-				font-size: 1.5em;
-			}
-
-			h3 {
-				font-size: 1.1em;
-			}
-
-			h4 {
-				font-size: 1em;
-			}
-
-		/* List */
-
-			ul.major-icons li img {
-				padding: 3em;
-			}
-
-				ul.major-icons li .icon {
-					height: 5em;
-					line-height: 5em;
-					width: 5em;
-				}
-
-					ul.major-icons li .icon:before {
-						font-size: 42px;
-					}
-
-		/* Icon */
-
-			.icon.major {
-				margin: 0 0 1em 0;
-			}
-
-		/* Button */
-
-			input[type="submit"],
-			input[type="reset"],
-			input[type="button"],
-			button,
-			.button {
-				height: 3em;
-				line-height: 3em;
-			}
-
-		/* Main */
-
-			.main {
-				padding: 3em 1.5em 1em 1.5em ;
-			}
-
-		/* Header */
-
-			#header {
-				padding: 4em 3em 4em 3em ;
-			}
-			
-
-				#header .actions {
-					margin: 2em 0 0 0;
-				}
-
-		/* Footer */
-
-			#footer {
-				padding: 3em 1.5em 3em 1.5em ;
-			}
-
 	}
 
 /* XSmall */
@@ -3512,36 +3323,6 @@ footer{
 						}
 	}
 
-/* XXSmall */
-
-	@media screen and (max-width: 320px) {
-
-		/* Basic */
-
-			html, body {
-				min-width: 320px;
-			}
-
-		/* Main */
-
-			.main {
-				padding: 2em 1em 0.1em 1em ;
-			}
-
-		/* Header */
-
-			#header {
-				padding: 3em 1em 3em 1em ;
-			}
-
-		/* Footer */
-
-			#footer {
-				padding: 2em 1em 2em 1em ;
-			}
-
-	}
-
 #popup{display: none;
 text-align: center;
 }
@@ -3588,7 +3369,9 @@ text-align: center;
   }
 }
 
-#roundcorner {border-radius: 4px;}
+#roundcorner {border-radius:4px;
+max-width: 100%
+}
 
 #head {padding-top: 30px;}
 
